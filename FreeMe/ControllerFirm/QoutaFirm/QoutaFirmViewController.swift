@@ -1,0 +1,75 @@
+//
+//  QoutaFirmViewController.swift
+//  FreeMe
+//
+//  Created by Asad's Mac on 17/02/2025.
+//
+
+import UIKit
+
+class QoutaFirmViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
+ 
+
+}
+extension QoutaFirmViewController:UITableViewDelegate,UITableViewDataSource{
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 2
+        
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "QoutaFirmTableViewCell", for: indexPath) as! QoutaFirmTableViewCell
+            
+            let view = UIView()
+            view.backgroundColor = .clear
+            cell.selectedBackgroundView = view
+            cell.lblname.text = "Hired"
+            cell.lblname.textColor = .systemGreen
+
+            return cell
+        }
+        else if indexPath.row == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "QoutaFirmTableViewCell", for: indexPath) as! QoutaFirmTableViewCell
+            
+            let view = UIView()
+            view.backgroundColor = .clear
+            cell.selectedBackgroundView = view
+            cell.lblname.text = "Pending"
+            cell.lblname.textColor = .red
+            
+            return cell
+        }
+        else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "QoutaFirmTableViewCell", for: indexPath) as! QoutaFirmTableViewCell
+            
+            let view = UIView()
+            view.backgroundColor = .clear
+            cell.selectedBackgroundView = view
+            
+            return cell
+        }
+   
+        
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+      
+        
+        
+    }
+    
+    
+}
