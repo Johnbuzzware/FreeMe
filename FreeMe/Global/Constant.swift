@@ -13,22 +13,34 @@ struct Constant {
        
     static let v2 = "v2/"
     static let version = "api/Commonrequest"
-    static let mainUrl = "https://buzzwaretech.com/bandy/Api"
-    static let googleWeApiKey = "AIzaSyCYZPH-tJv51vAuGcsRR3nGDpxZCToX5sM"
+    static let mainUrl = "https://us-central1-monymarket-7aca4.cloudfunctions.net/widgets"
+    static let mainUrl2 = "https://us-central1-monymarket-7aca4.cloudfunctions.net/widgetsforusa"
+
+
+    static let email_cache_key = "user_email"
+
+    static let StripeUSA = "pk_test_51N1rJULxSY4VH6EjLyKFv9KKjRE8RSymxR8JgoVbQZ6FmxG7s3tlRwcKdeZjb97ZM1RD88pTjmhCJy01vIkcwzeG004EpD4Ref"
+    static let StripeSEEPA = "pk_test_51N1EqjKyTrZc5xbIjWXjzNsnJnIj2EDGH6VQq9SRWjPrphUgKG3GzuaKPOsO9M22M3rcUZkA9RJ9V4QulJsflSoe0013D76guJ"
     
-    
+    static let googleWeApiKey = "AIzaSyD6Y1yz_G1rYxXv1xivVH9soq0Q2okEmUI"
+
+    static let flutterPublicKey = "FLWPUBK_TEST-bd23e7007057117d17daf712192ba5fe-X"
+    static let flutterEncryKey = "FLWSECK_TEST4826feba256a"
+    static let ExchangeRateKey = "77464443dfea43cdbdffd5b09d8a0454"
+
     //Login Api Endpoints
     static let app_login = "app_login"
     static let login_cache_Key = "login_cache_Key"
     static let login_key = "login_key"
     static let mainGoogleUrl = "https://maps.googleapis.com/maps/api"
-    static let userDetailUrl = "http://137.184.111.69/tattoo/customer/getDetail/"
+    static let exchangeUrl = "https://api.currencyfreaks.com"
+
         //// model key's
     static let token_key = "token"
     
     // Product Api Endpoints
     static let user_coins = "user_coins"
-    static let euro = "€"
+    
     // Forgot Password Endpoints
     static let forget_Password = "forgetPassword"
     
@@ -56,41 +68,63 @@ struct Constant {
     
     
     static let key = "key"
+    
+    static let AdminKey = "CC910BwbNWQLGmJc9d1l2AebIA12"
 
     
-    
+    static let NODE_REPORT = "ReportUser";
+
     static let NODE_USERS = "Users";
-    static let NODE_SHOP = "Shop";
-    static let NODE_USERRIDE = "UserRides";
-
-    static let NODE_EVENTS = "Events";
-    static let NODE_LEVEL = "Levels";
-
-    static let NODE_EVENTLOCATIONS = "EventsLocation";
-    static let NODE_EVENTCAUTION = "EventsCaution";
-    static let NODE_EVENTCAMERA = "EventsCamera";
-
-    static let NODE_EVENTATTENDIES = "EventAttendies";
-
-    static let NODE_CATEGORY = "Categories";
-    static let NODE_CONVERSATIONS = "Conversations";
-    static let NODE_CHATS = "Chat";
-    static let NODE_CLIENTCHAT = "ClientChats"
-    static let NODE_ADMINCHAT = "AdminChats"
     static let NODE_POSTS = "Posts";
-    static let NODE_NOTI = "Notifications";
+
+    static let NODE_TIMESHEET = "TimeSheet";
+
+   // static let NODE_ADMINCHAT = "AdminChat"
+    static let NODE_CHAT = "Chats"
+
+    
+    
+    static let NODE_JOBS = "Jobs";
+    static let NODE_JOBSWORKER = "JobWorker";
+
+    static let NODE_LEAVES = "Leaves";
+
+    
+    
+    
+    
+    
+    static let NODE_CATEGORY = "Categories";
+    static let NODE_FEED = "Feedback";
+    static let NODE_JOBAPPROVE = "JobEditApprove";
+
+    static let NODE_BANKDETAIL = "BankDetails";
+    static let NODE_TRANSACTION = "Transactions";
+
+    static let NODE_CONVERSATIONS = "Conversations";
+  //  static let NODE_CHATS = "Chats";
+ //   static let NODE_ADMINCHATS = "AdminChats";
+    static let NODE_PRODUCTS = "Products";
+    static let NODE_BANKLIST = "Banks";
+    static let NODE_BANKLISTACCOUNT = "BankAccounts";
+
+    static let NODE_CART = "Cart";
+    static let NODE_WALLET = "Wallet";
+    static let NODE_OFFERS = "Offers";
+
+    static let NODE_TRANSFER = "TranferData";
+
+    static let NODE_ORDER = "Order";
+
+
+
+    static let NODE_NOTI = "Notification";
+    static let NODE_NOTISET = "NotificationSettings";
     static let NODE_SETTING = "Settings";
-    static let NODE_SPECIALITIES = "Specialities";
-    static let NODE_CATEGORIES = "Categories";
-    static let NODE_COMMENTS = "Comments";
-    static let NODE_SERVICES = "Services";
-    static let NODE_STORIES = "Stories";
-    static let NODE_VEHICLEDOCUMENTS = "VehicleDocuments";
-    static let NODE_VEHICLES = "Vehicles";
-    static let NODE_FINANCE = "finance";
-    static let NA = "N/A"
+
+
+
     static let cust_id = "cust_id"
-    static let montserratMFont = "Montserrat-SemiBold"
 
     
         //// model key's

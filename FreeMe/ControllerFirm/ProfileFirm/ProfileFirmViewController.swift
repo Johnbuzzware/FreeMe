@@ -38,11 +38,15 @@ class ProfileFirmViewController: UIViewController {
     
     @IBAction func btnlogout(_ sender: Any) {
         
-        let vc = UIStoryboard.storyBoard(withName: .main).loadViewControllerss(withIdentifier: "ViewMain")
-        UIApplication.shared.windows.first?.rootViewController = vc
+        PopupHelper.showAnimating(self)
+        FirebaseData.logoutUserData { error in
+            self.stopAnimating()
+            let vc = UIStoryboard.storyBoard(withName: .main).loadViewControllerss(withIdentifier: "ViewMain")
+            UIApplication.shared.windows.first?.rootViewController = vc
+        }
+     
         
     }
-    
     
     
     @objc func switchAction(_ sender:UIButton){

@@ -1626,8 +1626,8 @@ extension UIColor {
         case BlueColor001
         case BlueColor002
         case yellowColor
+        case greenColor
 
-  
     }
     /**
      To get UIColor from hex string.
@@ -1637,6 +1637,7 @@ extension UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         
         if (cString.hasPrefix("#")) {
+            
             cString.remove(at: cString.startIndex)
         }
         
@@ -1650,9 +1651,11 @@ extension UIColor {
             alpha: CGFloat(1.0)
         )
     }
+    
     func colorsFromAsset(name: assetColors) -> UIColor{
         switch name {
-
+        case .greenColor:
+            return UIColor(named: name.rawValue)!
         case .BlueColor001:
             return UIColor(named: name.rawValue)!
         case .BlueColor002:
@@ -1774,7 +1777,7 @@ extension UIButton {
 
         //self.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "placeholder.png"))
 
-        let placholdr = UIImage(named: "male")!
+        let placholdr = UIImage(named: "Banner thumbnail")!
 
         self.sd_setImage(with: URL(string: url), for: .normal, placeholderImage: placholdr, options: .continueInBackground){ (image, error, cacheType, url) in
             activityIndicator.stopAnimating()
@@ -1797,7 +1800,7 @@ extension UIButton {
 
         //self.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "placeholder.png"))
 
-        let placholdr = UIImage(named: "banner")!
+        let placholdr = UIImage(named: "Banner thumbnail")!
 
         self.sd_setImage(with: URL(string: url), for: .normal, placeholderImage: placholdr, options: .continueInBackground){ (image, error, cacheType, url) in
             activityIndicator.stopAnimating()
@@ -1825,7 +1828,7 @@ extension UIImageView {
 
         //self.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "placeholder.png"))
 
-        let placholdr = UIImage(named: "banner")!
+        let placholdr = UIImage(named: "Banner thumbnail")!
 
         self.sd_setImage(with: URL(string: url), placeholderImage: placholdr, options: .continueInBackground){ (image, error, cacheType, url) in
             activityIndicator.stopAnimating()
@@ -1850,7 +1853,7 @@ extension UIImageView {
 
         //self.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "placeholder.png"))
 
-        let placholdr = UIImage(named: "male")!
+        let placholdr = UIImage(named: "Banner thumbnail")!
 
         self.sd_setImage(with: URL(string: url), placeholderImage: placholdr, options: .continueInBackground){ (image, error, cacheType, url) in
             activityIndicator.stopAnimating()
@@ -1873,7 +1876,7 @@ extension UIImageView {
 
         //self.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "placeholder.png"))
 
-        let placholdr = UIImage(named: "banner")!
+        let placholdr = UIImage(named: "Banner thumbnail")!
 
         self.sd_setImage(with: URL(string: url), placeholderImage: placholdr, options: .continueInBackground){ (image, error, cacheType, url) in
             activityIndicator.stopAnimating()

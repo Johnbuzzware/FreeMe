@@ -11,13 +11,13 @@ target 'FreeMe' do
   pod 'LGSideMenuController','2.1.1'
   
   
- # pod 'Firebase/Firestore'
- # pod 'Firebase/Auth'
- # pod 'Firebase/Storage'
- # pod 'FirebaseFirestoreSwift'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
+  pod 'FirebaseFirestoreSwift'
 
- # pod 'Firebase/Core'
- # pod 'Firebase/Messaging'
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
   
  # pod 'RangeSeekSlider'
   

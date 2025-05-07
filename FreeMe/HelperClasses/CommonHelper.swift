@@ -25,53 +25,26 @@ class CommonHelper
 
 
     
-    
-//
-//    class func getCachedServiceData() -> ServiceProviderModel? {
-//        return ServiceProviderModel(dictionary: UserDefaults.standard.dictionary(forKey: Constant.sp_key) as AnyObject)
-//    }
-//
-//    class func getCurrentUserSender(isredirect:Bool)-> SenderUser {
-//
-//        if isredirect{
-//
-//            return SenderUser(senderId: Auth.auth().currentUser?.uid ?? "", displayName: getCachedServiceData()?.name ?? "")
-//        }
-//        else{
-//            return SenderUser(senderId: Auth.auth().currentUser?.uid ?? "", displayName: getCachedUserData()?.name ?? "")
-//        }
-//
-//    }
-//
-//
-//    class func saveCachedUserData(userData:UserModel){
-//
-//        let userDefaults = UserDefaults.standard
-//        userDefaults.setValue(userData.dictionary, forKey: Constant.product_cache_key)
-//        userDefaults.synchronize()
-//    }
-//
-//
-//    class func getCachedUserData() -> UserModel?{
-//        return UserModel(dictionary: UserDefaults.standard.dictionary(forKey: Constant.product_cache_key) as AnyObject)
-//    }
+
+    class func saveCachedUserData(userData:UserModel){
+
+        let userDefaults = UserDefaults.standard
+        userDefaults.setValue(userData.dictionary, forKey: Constant.product_cache_key)
+        userDefaults.synchronize()
+    }
 
 
+    class func getCachedUserData() -> UserModel?{
+        return UserModel(dictionary: UserDefaults.standard.dictionary(forKey: Constant.product_cache_key) as AnyObject)
+    }
 
-//    class func removeCachedUserData() {
-//        let userDefaults = UserDefaults.standard
-//        userDefaults.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
-//        userDefaults.synchronize()
-//    }
+
     
-    
-//    class func removeCachedUserData() {
-//        let defaults = UserDefaults.standard
-//        let dictionary = defaults.dictionaryRepresentation()
-//        dictionary.keys.forEach { key in
-//            defaults.removeObject(forKey: key)
-//        }
-//    }
+    class func removeCachedUserData() {
+        let userDefaults = UserDefaults.standard
+        userDefaults.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
+        userDefaults.synchronize()
+    }
     
     
     class func setLeftPadding(_ txt: UITextField?)
@@ -236,30 +209,29 @@ class CommonHelper
 //        self.window?.makeKeyAndVisible()
 //    }
     
-//    class func saveCachedUserData(_ userData:[DashModel]){
-//        let userDefaults = UserDefaults.standard
-//        do {
-//            try userDefaults.setObject(userData, forKey: Constant.product_cache_key)
-//        } catch {
-//          print(error.localizedDescription)
-//        }
-//      }
-//      class func getCachedUserData() -> [DashModel]? {
-//        let userDefaults = UserDefaults.standard
-//        do {
-//            let user = try userDefaults.getObject(forKey: Constant.product_cache_key, castTo: [DashModel].self)
-//          //print(user.user_id ?? "0")
-//          return user
-//        } catch {
-//          print(error.localizedDescription)
-//          return nil
-//        }
-//      }
-//      class func removeCachedUserData() {
-//        let userDefaults = UserDefaults.standard
-//        userDefaults.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
-//        userDefaults.synchronize()
-//      }
+    class func saveCachedEmail(_ email: String) {
+           let userDefaults = UserDefaults.standard
+           do {
+               try userDefaults.setObject(email, forKey: Constant.email_cache_key)
+           } catch {
+               print("Failed to save email:", error.localizedDescription)
+           }
+       }
+
+       class func getCachedEmail() -> String? {
+           let userDefaults = UserDefaults.standard
+           do {
+               let email = try userDefaults.getObject(forKey: Constant.email_cache_key, castTo: String.self)
+               return email
+           } catch {
+               print("Failed to retrieve email:", error.localizedDescription)
+               return nil
+           }
+       }
+
+       class func removeCachedEmail() {
+           UserDefaults.standard.removeObject(forKey: Constant.email_cache_key)
+       }
     
 }
 

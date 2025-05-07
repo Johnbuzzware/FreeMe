@@ -53,6 +53,34 @@ class PopupHelper
         
         
     }
+    
+    static func alertWithFieldForget(title: String,message:String,controller:UIViewController){
+        let alertController = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
+        
+        alertController.addTextField { (textField) in
+            textField.placeholder = "Email Address"
+            textField.text = ""
+            textField.placeHolderColor = .lightGray
+        }
+        let saveAction = UIAlertAction.init(title: "Send", style: .default) { (alertAction) in
+            
+            let email = alertController.textFields?.first?.text ?? ""
+            alertController.dismiss(animated: true) {
+                
+                if let controllerpoint = controller as? LoginViewController{
+                    controllerpoint.fogetPassword(email)
+                }
+            }
+        }
+        let cancelAction = UIAlertAction.init(title: "Cancel", style: .destructive) { (alertAction) in
+            alertController.dismiss(animated: true, completion: nil)
+        }
+        
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        
+        controller.present(alertController, animated: true, completion: nil)
+    }
     static func alertWithOk(title: String,message: String,controler:UIViewController){
         let alertController = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
         
